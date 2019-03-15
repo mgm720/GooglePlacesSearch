@@ -54,14 +54,38 @@
 		5CDAF6B3223B386900CFFADD /* GooglePlacesSearch */ = {
 			isa = PBXGroup;
 			children = (
-				5CDAF6B4223B386900CFFADD /* AppDelegate.swift */,
-				5CDAF6B6223B386900CFFADD /* SearchViewController.swift */,
-				5CDAF6B8223B386900CFFADD /* Main.storyboard */,
+				5CDAF6C8223B573C00CFFADD /* Model */,
+				5CDAF6C7223B572E00CFFADD /* View */,
+				5CDAF6C6223B571900CFFADD /* Controller */,
 				5CDAF6BB223B387000CFFADD /* Assets.xcassets */,
 				5CDAF6BD223B387000CFFADD /* LaunchScreen.storyboard */,
 				5CDAF6C0223B387000CFFADD /* Info.plist */,
 			);
 			path = GooglePlacesSearch;
+			sourceTree = "<group>";
+		};
+		5CDAF6C6223B571900CFFADD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5CDAF6B4223B386900CFFADD /* AppDelegate.swift */,
+				5CDAF6B6223B386900CFFADD /* SearchViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5CDAF6C7223B572E00CFFADD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5CDAF6B8223B386900CFFADD /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5CDAF6C8223B573C00CFFADD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
