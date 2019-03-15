@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller-->
+        <!--Google Places Search-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="GooglePlacesSearch" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JOp-cK-hjU">
-                                <rect key="frame" x="15" y="423" width="384" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JOp-cK-hjU">
+                                <rect key="frame" x="15" y="288" width="384" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hka-6g-aiM"/>
                                 </constraints>
@@ -28,7 +28,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="location"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Vq-Y9-R0K">
-                                <rect key="frame" x="20" y="433" width="39" height="31"/>
+                                <rect key="frame" x="20" y="298" width="39" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="MSR-BV-u9r">
@@ -37,20 +37,48 @@
                                     </imageView>
                                 </subviews>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Search Bar to Begin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfo-yK-ezH">
+                                <rect key="frame" x="115" y="255" width="184" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L5Y-LW-q9J">
+                                <rect key="frame" x="0.0" y="153" width="414" height="709"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResultCell" id="6YE-cn-CWw">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6YE-cn-CWw" id="RcR-Sh-BdJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JOp-cK-hjU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7gx-Z4-d8f"/>
-                            <constraint firstItem="JOp-cK-hjU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QpD-qS-7Wf"/>
+                            <constraint firstItem="JOp-cK-hjU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="OaX-pm-R2e"/>
+                            <constraint firstItem="L5Y-LW-q9J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="Pqz-vg-IZj"/>
+                            <constraint firstItem="JOp-cK-hjU" firstAttribute="top" secondItem="qfo-yK-ezH" secondAttribute="bottom" constant="12" id="fIv-om-yjs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JOp-cK-hjU" secondAttribute="trailing" constant="15" id="hJ2-Xr-HdL"/>
+                            <constraint firstItem="L5Y-LW-q9J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qco-0t-tn2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="L5Y-LW-q9J" secondAttribute="bottom" id="tKa-gf-bCA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L5Y-LW-q9J" secondAttribute="trailing" id="vsK-56-uLd"/>
                             <constraint firstItem="JOp-cK-hjU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="w6E-Iv-UNZ"/>
+                            <constraint firstItem="qfo-yK-ezH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zX0-KN-MB2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Clh-5b-xsS"/>
+                    <navigationItem key="navigationItem" title="Google Places Search" id="Clh-5b-xsS"/>
                     <connections>
+                        <outlet property="resultsTableView" destination="L5Y-LW-q9J" id="HPz-Vh-7dz"/>
                         <outlet property="searchInsetView" destination="7Vq-Y9-R0K" id="yct-30-Jbv"/>
+                        <outlet property="searchLabel" destination="qfo-yK-ezH" id="sca-dD-Dje"/>
                         <outlet property="searchTextField" destination="JOp-cK-hjU" id="bqX-Py-T3p"/>
+                        <outlet property="searchTextFieldTopConstraint" destination="OaX-pm-R2e" id="PN0-QX-cpo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
