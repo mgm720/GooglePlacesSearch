@@ -10,9 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchInsetView: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        setupUI()
+    }
+    
+    func setupUI() {
+        searchTextField.leftView = searchInsetView
+        searchTextField.leftViewMode = .always
     }
 
 

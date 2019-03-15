@@ -28,15 +28,14 @@
                                 <textInputTraits key="textInputTraits" textContentType="location"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Vq-Y9-R0K">
-                                <rect key="frame" x="20" y="433" width="31" height="31"/>
+                                <rect key="frame" x="20" y="433" width="39" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="MSR-BV-u9r">
-                                        <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
+                                        <rect key="frame" x="8" y="0.0" width="31" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -49,6 +48,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Clh-5b-xsS"/>
+                    <connections>
+                        <outlet property="searchInsetView" destination="7Vq-Y9-R0K" id="yct-30-Jbv"/>
+                        <outlet property="searchTextField" destination="JOp-cK-hjU" id="bqX-Py-T3p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
