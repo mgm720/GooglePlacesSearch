@@ -44,7 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L5Y-LW-q9J">
-                                <rect key="frame" x="0.0" y="153" width="414" height="709"/>
+                                <rect key="frame" x="0.0" y="388" width="414" height="474"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResultCell" id="6YE-cn-CWw">
@@ -61,7 +61,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JOp-cK-hjU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="OaX-pm-R2e"/>
-                            <constraint firstItem="L5Y-LW-q9J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="Pqz-vg-IZj"/>
+                            <constraint firstItem="L5Y-LW-q9J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="Pqz-vg-IZj"/>
                             <constraint firstItem="JOp-cK-hjU" firstAttribute="top" secondItem="qfo-yK-ezH" secondAttribute="bottom" constant="12" id="fIv-om-yjs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JOp-cK-hjU" secondAttribute="trailing" constant="15" id="hJ2-Xr-HdL"/>
                             <constraint firstItem="L5Y-LW-q9J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qco-0t-tn2"/>
@@ -79,6 +79,7 @@
                         <outlet property="searchLabel" destination="qfo-yK-ezH" id="sca-dD-Dje"/>
                         <outlet property="searchTextField" destination="JOp-cK-hjU" id="bqX-Py-T3p"/>
                         <outlet property="searchTextFieldTopConstraint" destination="OaX-pm-R2e" id="PN0-QX-cpo"/>
+                        <outlet property="tableViewTopConstraint" destination="Pqz-vg-IZj" id="GJX-bF-OtC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
