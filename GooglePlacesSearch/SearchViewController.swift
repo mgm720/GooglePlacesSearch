@@ -10,13 +10,10 @@ import UIKit
 
 class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    
-
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchInsetView: UIView!
     @IBOutlet weak var searchLabel: UILabel!
     @IBOutlet weak var resultsTableView: UITableView!
-    
     @IBOutlet weak var searchTextFieldTopConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
@@ -32,14 +29,13 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-        print("Began editing")
+
         searchTextFieldTopConstraint.constant = 10
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.2) {
             self.view.layoutIfNeeded()
-            self.searchLabel.isHidden = true
-            self.resultsTableView.isHidden = false
         }
+        self.searchLabel.isHidden = true
+        self.resultsTableView.isHidden = false
     }
     
     func setupUI() {
