@@ -5,6 +5,7 @@
 //  Created by Michael Miles on 3/17/19.
 //  Copyright © 2019 Michael Miles. All rights reserved.
 //
+// used the following article for reference on API search: https://medium.com/@MuraliKathir/build-a-simple-api-search-with-alamofire-and-swiftyjson-80286e833315
 
 import Foundation
 import SwiftyJSON
@@ -23,6 +24,8 @@ class APIRequestFetcher {
     
     func search(searchText: String, completionHandler: @escaping ([JSON]?, NetworkError) -> ()) {
         let originalURL = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=\(searchText)&sessiontoken=\(sessionID)&key=\(googleAPI)"
+        
+        // learned about this feature here https://stackoverflow.com/questions/3439853/replace-occurrences-of-space-in-url
         let googleURL : String = originalURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         
         Alamofire.request(googleURL).responseJSON { (response) in
