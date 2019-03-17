@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2810F6D048535C0AA4D09C59 /* Pods_GooglePlacesSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE04F26CEE7BE3E9D326F92 /* Pods_GooglePlacesSearch.framework */; };
 		5CDAF6B5223B386900CFFADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDAF6B4223B386900CFFADD /* AppDelegate.swift */; };
 		5CDAF6B7223B386900CFFADD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDAF6B6223B386900CFFADD /* SearchViewController.swift */; };
 		5CDAF6BA223B386900CFFADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CDAF6B8223B386900CFFADD /* Main.storyboard */; };
@@ -24,6 +25,9 @@
 		5CDAF6BE223B387000CFFADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CDAF6C0223B387000CFFADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CDAF6C9223B57B300CFFADD /* PlaceDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDataModel.swift; sourceTree = "<group>"; };
+		5DE04F26CEE7BE3E9D326F92 /* Pods_GooglePlacesSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GooglePlacesSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B53B63079EF136EB56BEA40B /* Pods-GooglePlacesSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooglePlacesSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-GooglePlacesSearch/Pods-GooglePlacesSearch.release.xcconfig"; sourceTree = "<group>"; };
+		E981EC886B5669CC3656DE5B /* Pods-GooglePlacesSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooglePlacesSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GooglePlacesSearch/Pods-GooglePlacesSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2810F6D048535C0AA4D09C59 /* Pods_GooglePlacesSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2463DDBFC8277A8E4500B3E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DE04F26CEE7BE3E9D326F92 /* Pods_GooglePlacesSearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5CDAF6A8223B386900CFFADD = {
 			isa = PBXGroup;
 			children = (
 				5CDAF6B3223B386900CFFADD /* GooglePlacesSearch */,
 				5CDAF6B2223B386900CFFADD /* Products */,
+				69C9279C96FAC75E8640F343 /* Pods */,
+				2463DDBFC8277A8E4500B3E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +106,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		69C9279C96FAC75E8640F343 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E981EC886B5669CC3656DE5B /* Pods-GooglePlacesSearch.debug.xcconfig */,
+				B53B63079EF136EB56BEA40B /* Pods-GooglePlacesSearch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CDAF6C3223B387000CFFADD /* Build configuration list for PBXNativeTarget "GooglePlacesSearch" */;
 			buildPhases = (
+				9E6455FBAD475E67583CA604 /* [CP] Check Pods Manifest.lock */,
 				5CDAF6AD223B386900CFFADD /* Sources */,
 				5CDAF6AE223B386900CFFADD /* Frameworks */,
 				5CDAF6AF223B386900CFFADD /* Resources */,
+				01E7130478CE1E6A9B45B0A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +182,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01E7130478CE1E6A9B45B0A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GooglePlacesSearch/Pods-GooglePlacesSearch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GooglePlacesSearch/Pods-GooglePlacesSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E6455FBAD475E67583CA604 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GooglePlacesSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5CDAF6AD223B386900CFFADD /* Sources */ = {
@@ -308,15 +375,13 @@
 		};
 		5CDAF6C4223B387000CFFADD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E981EC886B5669CC3656DE5B /* Pods-GooglePlacesSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 757N5X329U;
 				INFOPLIST_FILE = GooglePlacesSearch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelgagemiles.GooglePlacesSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -326,15 +391,13 @@
 		};
 		5CDAF6C5223B387000CFFADD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B53B63079EF136EB56BEA40B /* Pods-GooglePlacesSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 757N5X329U;
 				INFOPLIST_FILE = GooglePlacesSearch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelgagemiles.GooglePlacesSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
