@@ -40,6 +40,10 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         resultsTableView.isHidden = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
     //MARK: TextField methods
     
     func textFieldDidBeginEditing(_ textField: UITextField) {

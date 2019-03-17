@@ -22,6 +22,8 @@ class ResultViewController: UIViewController {
         fetchDetail(for: selectedPlace)
         
         placeDetail.placeID = selectedPlace
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     func fetchDetail(for text: String) {
@@ -42,7 +44,7 @@ class ResultViewController: UIViewController {
     }
     
     func updateUIWithPlaceDetail() {
-        
+        self.title = placeDetail.name
     }
     
 }
