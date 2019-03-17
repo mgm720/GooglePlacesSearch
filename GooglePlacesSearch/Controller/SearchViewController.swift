@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
     
@@ -17,6 +19,14 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     
     @IBOutlet weak var searchTextFieldTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
+    
+    var searchResults = [JSON]() {
+        didSet {
+            resultsTableView.reloadData()
+        }
+    }
+    
+    let apiFetcher = APIRequestFetcher()
     
     
     override func viewDidLoad() {
@@ -47,7 +57,27 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
-        print(searchTextField.text ?? "no text")
+        searchResults.removeAll()
+        guard let textToSearch = textField.text, !textToSearch.isEmpty else {
+            return
+        }
+        fetchResults(for: textToSearch)
+    }
+    
+    func fetchResults(for text: String) {
+        print("text searched: \(text)")
+        apiFetcher.search(searchText: text, completionHandler: {
+            [weak self] results, error in
+            if case .failed = error {
+                return
+            }
+            
+            guard let results = results, !results.isEmpty else {
+                return
+            }
+            
+            self?.searchResults = results
+        })
     }
     
     func setupUI() {
@@ -57,11 +87,14 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     
     //MARK: TableView methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return searchResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath)
+        
+        cell.textLabel?.text = searchResults[indexPath.row]["description"].stringValue
+        
         return cell
     }
 
