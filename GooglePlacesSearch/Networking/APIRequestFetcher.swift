@@ -42,7 +42,19 @@ class APIRequestFetcher {
             }
             
             completionHandler(results, .success)
-            print(results ?? "no results")
         }
     }
+    
+    func accessDetail(placeID: String) {
+        let googleURL = "https://maps.googleapis.com/maps/api/place/details/json?placeid=\(placeID)&fields=name,formatted_address,formatted_phone_number,rating,user_ratings_total,website&key=\(googleAPI)"
+        
+        Alamofire.request(googleURL, method: .get).responseJSON { (response) in
+            if response.result.isSuccess {
+                print(JSON(response.result.value!))
+            } else {
+                print("Error \(String(describing: response.result.error))")
+            }
+        }
+    }
+
 }

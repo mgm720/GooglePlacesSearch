@@ -8,4 +8,9 @@
 
 import Foundation
 
-
+class PlaceDetailDataModel {
+    var placeID : String = ""
+    var name : String? = ""
+    var address : String? = ""
+    var phoneNumber : String? = ""
+}

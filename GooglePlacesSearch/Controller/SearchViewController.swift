@@ -25,7 +25,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
             resultsTableView.reloadData()
         }
     }
-    
     let apiFetcher = APIRequestFetcher()
     
     
@@ -103,6 +102,17 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         return 75
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToResult", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! ResultViewController
+        
+        if let indexPath = resultsTableView.indexPathForSelectedRow {
+            destinationVC.selectedPlace = searchResults[indexPath.row]["place_id"].stringValue
+        }
+    }
 
 }
 
