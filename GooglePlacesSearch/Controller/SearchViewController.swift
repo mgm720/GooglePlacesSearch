@@ -91,11 +91,16 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath) as! ResultTableViewCell
         
-        cell.textLabel?.text = searchResults[indexPath.row]["description"].stringValue
+        cell.titleLabel.text = searchResults[indexPath.row]["structured_formatting"]["main_text"].stringValue
+        cell.descriptionLabel.text = searchResults[indexPath.row]["structured_formatting"]["secondary_text"].stringValue
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
     }
 
 

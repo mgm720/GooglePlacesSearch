@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2810F6D048535C0AA4D09C59 /* Pods_GooglePlacesSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE04F26CEE7BE3E9D326F92 /* Pods_GooglePlacesSearch.framework */; };
 		5C4FE098223E3C9600026114 /* APIRequestFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FE097223E3C9600026114 /* APIRequestFetcher.swift */; };
+		5C4FE09B223E51FC00026114 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FE09A223E51FC00026114 /* ResultTableViewCell.swift */; };
 		5CDAF6B5223B386900CFFADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDAF6B4223B386900CFFADD /* AppDelegate.swift */; };
 		5CDAF6B7223B386900CFFADD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDAF6B6223B386900CFFADD /* SearchViewController.swift */; };
 		5CDAF6BA223B386900CFFADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CDAF6B8223B386900CFFADD /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		5C4FE097223E3C9600026114 /* APIRequestFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestFetcher.swift; sourceTree = "<group>"; };
+		5C4FE09A223E51FC00026114 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		5CDAF6B1223B386900CFFADD /* GooglePlacesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooglePlacesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CDAF6B4223B386900CFFADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CDAF6B6223B386900CFFADD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				5CDAF6B8223B386900CFFADD /* Main.storyboard */,
+				5C4FE09A223E51FC00026114 /* ResultTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				5CDAF6CA223B57B300CFFADD /* PlaceDataModel.swift in Sources */,
 				5CDAF6B7223B386900CFFADD /* SearchViewController.swift in Sources */,
 				5C4FE098223E3C9600026114 /* APIRequestFetcher.swift in Sources */,
+				5C4FE09B223E51FC00026114 /* ResultTableViewCell.swift in Sources */,
 				5CDAF6B5223B386900CFFADD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
