@@ -43,7 +43,7 @@ class APIRequestFetcher {
             completionHandler(results, .success)
         }
     }
-    
+    //TODO: Check status of the search and display uialert or the tableView's text to user depending on the issue (i.e. Alamofire to server issue, or issue with Google Places API)
 }
 
 

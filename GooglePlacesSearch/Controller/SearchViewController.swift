@@ -72,10 +72,28 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         apiFetcher.search(searchText: text, completionHandler: {
             [weak self] results, error in
             if case .failed = error {
+                let alertController = UIAlertController(title: "Network Error", message: "Error connecting to network", preferredStyle: .alert)
+                
+                let actionOk = UIAlertAction(title: "OK",
+                                             style: .default,
+                                             handler: nil)
+                
+                alertController.addAction(actionOk)
+                
+                self?.present(alertController, animated: true, completion: nil)
                 return
             }
             
             guard let results = results, !results.isEmpty else {
+                let alertController = UIAlertController(title: "Error", message: "Able to connect to network, but could not find results", preferredStyle: .alert)
+                
+                let actionOk = UIAlertAction(title: "OK",
+                                             style: .default,
+                                             handler: nil)
+                
+                alertController.addAction(actionOk)
+                
+                self?.present(alertController, animated: true, completion: nil)
                 return
             }
             

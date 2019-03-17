@@ -20,7 +20,17 @@ extension ResultViewController {
                 self.updatePlaceDetail(json: result)
                 print(result)
             } else {
-                print("Error \(String(describing: response.result.error))")
+                let errorMessage = String(describing: response.result.error)
+                print("Error \(errorMessage)")
+                let alertController = UIAlertController(title: "Network Error", message: "Error connecting to network \(errorMessage)", preferredStyle: .alert)
+                
+                let actionOk = UIAlertAction(title: "OK",
+                                             style: .default,
+                                             handler: nil)
+                
+                alertController.addAction(actionOk)
+                
+                self.present(alertController, animated: true, completion: nil)
             }
         }
     }

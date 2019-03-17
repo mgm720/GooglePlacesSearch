@@ -55,10 +55,29 @@ class ResultViewController: UIViewController {
     func updateUIWithPlaceDetail() {
         self.title = placeDetail.name
         
-        addressTextView.text = placeDetail.address
-        phoneTextView.text = "📞 " + placeDetail.phoneNumber!
-        websiteTextView.text = placeDetail.website
-        ratingsTextView.text = "\(placeDetail.rating!)⭐️ || \(placeDetail.userRatingsCount!) Ratings"
+        if placeDetail.address?.isEmpty == true {
+            addressTextView.text = "No Address Available"
+        } else {
+            addressTextView.text = placeDetail.address
+        }
+        
+        if placeDetail.phoneNumber?.isEmpty == true {
+            phoneTextView.text = "No Phone # Available"
+        } else {
+            phoneTextView.text = "📞 " + placeDetail.phoneNumber!
+        }
+        
+        if placeDetail.website?.isEmpty == true {
+            websiteTextView.text = "No Website Available"
+        } else {
+            websiteTextView.text = placeDetail.website
+        }
+        
+        if placeDetail.rating?.isEmpty == true {
+            ratingsTextView.text = "No Ratings"
+        } else {
+            ratingsTextView.text = "\(placeDetail.rating!)⭐️ || \(placeDetail.userRatingsCount!) Ratings"
+        }
     }
     
 }
