@@ -16,6 +16,13 @@ class ResultViewController: UIViewController {
     let placeDetail = PlaceDetailDataModel()
     let apiFetcher = APIRequestFetcher()
 
+    @IBOutlet weak var detailView: UIView!
+    @IBOutlet weak var addressTextView: UITextView!
+    @IBOutlet weak var phoneTextView: UITextView!
+    @IBOutlet weak var websiteTextView: UITextView!
+    @IBOutlet weak var ratingsTextView: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +31,8 @@ class ResultViewController: UIViewController {
         placeDetail.placeID = selectedPlace
         
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        detailView.layer.cornerRadius = 30
     }
 
     func fetchDetail(for text: String) {
@@ -37,14 +46,19 @@ class ResultViewController: UIViewController {
         placeDetail.address = detail["formatted_address"].stringValue
         placeDetail.phoneNumber = detail["formatted_phone_number"].stringValue
         placeDetail.website = detail["website"].stringValue
-        placeDetail.rating = detail["rating"].floatValue
-        placeDetail.userRatingsCount = detail["user_ratings_total"].intValue
+        placeDetail.rating = detail["rating"].stringValue
+        placeDetail.userRatingsCount = detail["user_ratings_total"].stringValue
         
         updateUIWithPlaceDetail()
     }
     
     func updateUIWithPlaceDetail() {
         self.title = placeDetail.name
+        
+        addressTextView.text = placeDetail.address
+        phoneTextView.text = "📞 " + placeDetail.phoneNumber!
+        websiteTextView.text = placeDetail.website
+        ratingsTextView.text = "\(placeDetail.rating!)⭐️ || \(placeDetail.userRatingsCount!) Ratings"
     }
     
 }

@@ -13,7 +13,7 @@ class PlaceDetailDataModel {
     var name : String? = ""
     var address : String? = ""
     var phoneNumber : String? = ""
-    var userRatingsCount : Int?
-    var rating : Float?
+    var userRatingsCount : String?
+    var rating : String?
     var website : String?
 }
