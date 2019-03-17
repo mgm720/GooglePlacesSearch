@@ -22,7 +22,8 @@ class APIRequestFetcher {
     let sessionID = String(Int.random(in: 0...99999999))
     
     func search(searchText: String, completionHandler: @escaping ([JSON]?, NetworkError) -> ()) {
-        let googleURL = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=\(searchText)&sessiontoken=\(sessionID)&key=\(googleAPI)"
+        let originalURL = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=\(searchText)&sessiontoken=\(sessionID)&key=\(googleAPI)"
+        let googleURL : String = originalURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         
         Alamofire.request(googleURL).responseJSON { (response) in
             guard let data = response.data else {
