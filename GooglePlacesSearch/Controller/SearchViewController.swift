@@ -31,6 +31,8 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         resultsTableView.isHidden = true
     }
     
+    //MARK: TextField methods
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
 
         searchTextFieldTopConstraint.constant = 10
@@ -40,6 +42,12 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         }
         self.searchLabel.isHidden = true
         self.resultsTableView.isHidden = false
+        
+        textField.addTarget(self, action: #selector(SearchViewController.textFieldDidChange(_:)), for: .editingChanged)
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        print(searchTextField.text ?? "no text")
     }
     
     func setupUI() {
