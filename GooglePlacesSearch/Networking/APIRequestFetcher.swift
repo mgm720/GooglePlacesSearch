@@ -19,11 +19,10 @@ enum NetworkError: Error {
 class APIRequestFetcher {
     var searchResults = [JSON]()
     
-    let googleAPI = "AIzaSyANAB2qpcDlxNOy74FD_n1UfaTOl6SD0QA"
     let sessionID = String(Int.random(in: 0...99999999))
     
     func search(searchText: String, completionHandler: @escaping ([JSON]?, NetworkError) -> ()) {
-        let originalURL = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=\(searchText)&sessiontoken=\(sessionID)&key=\(googleAPI)"
+        let originalURL = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=\(searchText)&sessiontoken=\(sessionID)&key=AIzaSyANAB2qpcDlxNOy74FD_n1UfaTOl6SD0QA"
         
         // learned about this feature here https://stackoverflow.com/questions/3439853/replace-occurrences-of-space-in-url
         let googleURL : String = originalURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
@@ -45,16 +44,6 @@ class APIRequestFetcher {
         }
     }
     
-    func accessDetail(placeID: String) {
-        let googleURL = "https://maps.googleapis.com/maps/api/place/details/json?placeid=\(placeID)&fields=name,formatted_address,formatted_phone_number,rating,user_ratings_total,website&key=\(googleAPI)"
-        
-        Alamofire.request(googleURL, method: .get).responseJSON { (response) in
-            if response.result.isSuccess {
-                print(JSON(response.result.value!))
-            } else {
-                print("Error \(String(describing: response.result.error))")
-            }
-        }
-    }
-
 }
+
+

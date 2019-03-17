@@ -11,6 +11,7 @@
 		5C4FE098223E3C9600026114 /* APIRequestFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FE097223E3C9600026114 /* APIRequestFetcher.swift */; };
 		5C4FE09B223E51FC00026114 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FE09A223E51FC00026114 /* ResultTableViewCell.swift */; };
 		5C4FE09D223E570000026114 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FE09C223E570000026114 /* ResultViewController.swift */; };
+		5C4FE09F223E760200026114 /* NetworkingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FE09E223E760200026114 /* NetworkingExtensions.swift */; };
 		5CDAF6B5223B386900CFFADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDAF6B4223B386900CFFADD /* AppDelegate.swift */; };
 		5CDAF6B7223B386900CFFADD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDAF6B6223B386900CFFADD /* SearchViewController.swift */; };
 		5CDAF6BA223B386900CFFADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CDAF6B8223B386900CFFADD /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		5C4FE097223E3C9600026114 /* APIRequestFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestFetcher.swift; sourceTree = "<group>"; };
 		5C4FE09A223E51FC00026114 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		5C4FE09C223E570000026114 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		5C4FE09E223E760200026114 /* NetworkingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingExtensions.swift; sourceTree = "<group>"; };
 		5CDAF6B1223B386900CFFADD /* GooglePlacesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooglePlacesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CDAF6B4223B386900CFFADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CDAF6B6223B386900CFFADD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				5C4FE097223E3C9600026114 /* APIRequestFetcher.swift */,
+				5C4FE09E223E760200026114 /* NetworkingExtensions.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			files = (
 				5CDAF6CA223B57B300CFFADD /* PlaceDetailDataModel.swift in Sources */,
 				5CDAF6B7223B386900CFFADD /* SearchViewController.swift in Sources */,
+				5C4FE09F223E760200026114 /* NetworkingExtensions.swift in Sources */,
 				5C4FE098223E3C9600026114 /* APIRequestFetcher.swift in Sources */,
 				5C4FE09B223E51FC00026114 /* ResultTableViewCell.swift in Sources */,
 				5CDAF6B5223B386900CFFADD /* AppDelegate.swift in Sources */,
