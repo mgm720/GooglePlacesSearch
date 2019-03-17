@@ -52,6 +52,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5C4FE099223E4AB900026114 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5C4FE097223E3C9600026114 /* APIRequestFetcher.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		5CDAF6A8223B386900CFFADD = {
 			isa = PBXGroup;
 			children = (
@@ -76,8 +84,8 @@
 				5CDAF6C8223B573C00CFFADD /* Model */,
 				5CDAF6C7223B572E00CFFADD /* View */,
 				5CDAF6C6223B571900CFFADD /* Controller */,
+				5C4FE099223E4AB900026114 /* Networking */,
 				5CDAF6BB223B387000CFFADD /* Assets.xcassets */,
-				5C4FE097223E3C9600026114 /* APIRequestFetcher.swift */,
 				5CDAF6BD223B387000CFFADD /* LaunchScreen.storyboard */,
 				5CDAF6C0223B387000CFFADD /* Info.plist */,
 			);
